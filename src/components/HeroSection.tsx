@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MessageCircle, ChevronDown } from "lucide-react";
 
-const WHATSAPP_NUMBER = "6287812345678";
+const WHATSAPP_NUMBER = "6287892882525";
 const WHATSAPP_MESSAGE = encodeURIComponent("Halo HASA, saya tertarik dengan produk Anda. Mohon informasi lebih lanjut.");
 
 export const HeroSection = () => {

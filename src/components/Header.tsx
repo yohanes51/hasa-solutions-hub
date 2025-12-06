@@ -11,7 +11,7 @@ const navLinks = [
   { href: "#kontak", label: "Kontak" },
 ];
 
-const WHATSAPP_NUMBER = "6287812345678";
+const WHATSAPP_NUMBER = "6287892882525";
 const WHATSAPP_MESSAGE = encodeURIComponent("Halo HASA, saya tertarik dengan produk Anda. Mohon informasi lebih lanjut.");
 
 export const Header = () => {
@@ -46,9 +46,9 @@ export const Header = () => {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-3">
-            <a href="tel:087812345678" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <a href="tel:087892882525" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
               <Phone className="w-4 h-4" />
-              <span className="hidden xl:inline">087812345678</span>
+              <span className="hidden xl:inline">087892882525</span>
             </a>
             <Button variant="whatsapp" size="sm" asChild>
               <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
@@ -84,9 +84,9 @@ export const Header = () => {
               ))}
             </nav>
             <div className="mt-4 pt-4 border-t border-border flex flex-col gap-3">
-              <a href="tel:087812345678" className="flex items-center gap-2 px-4 py-2 text-sm text-muted-foreground">
+              <a href="tel:087892882525" className="flex items-center gap-2 px-4 py-2 text-sm text-muted-foreground">
                 <Phone className="w-4 h-4" />
-                087812345678
+                087892882525
               </a>
               <div className="px-4">
                 <Button variant="whatsapp" className="w-full" asChild>
