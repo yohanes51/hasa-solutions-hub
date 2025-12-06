@@ -14,8 +14,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["Poppins", "system-ui", "sans-serif"],
-        heading: ["Poppins", "system-ui", "sans-serif"],
+        sans: ["Plus Jakarta Sans", "system-ui", "sans-serif"],
+        heading: ["Plus Jakarta Sans", "system-ui", "sans-serif"],
+        body: ["Inter", "system-ui", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -64,16 +65,21 @@ export default {
         hasa: {
           orange: "hsl(var(--hasa-orange))",
           "orange-dark": "hsl(var(--hasa-orange-dark))",
+          "orange-light": "hsl(var(--hasa-orange-light))",
           charcoal: "hsl(var(--hasa-charcoal))",
           gray: "hsl(var(--hasa-gray))",
           light: "hsl(var(--hasa-light))",
           warm: "hsl(var(--hasa-warm))",
+          dark: "hsl(var(--hasa-dark))",
         },
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+        xl: "1rem",
+        "2xl": "1.25rem",
+        "3xl": "1.5rem",
       },
       boxShadow: {
         sm: "var(--shadow-sm)",
@@ -81,6 +87,8 @@ export default {
         lg: "var(--shadow-lg)",
         xl: "var(--shadow-xl)",
         glow: "var(--shadow-glow)",
+        card: "var(--shadow-card)",
+        "card-hover": "var(--shadow-card-hover)",
       },
       keyframes: {
         "accordion-down": {
@@ -92,8 +100,8 @@ export default {
           to: { height: "0" },
         },
         float: {
-          "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-10px)" },
+          "0%, 100%": { transform: "translateY(0) rotate(0deg)" },
+          "50%": { transform: "translateY(-20px) rotate(2deg)" },
         },
         pulse: {
           "0%, 100%": { opacity: "1" },
@@ -103,7 +111,7 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        float: "float 3s ease-in-out infinite",
+        float: "float 6s ease-in-out infinite",
         pulse: "pulse 2s ease-in-out infinite",
       },
     },
