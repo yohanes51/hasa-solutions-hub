@@ -26,17 +26,20 @@ const testimonials = [
 
 export const TestimonialsSection = () => {
   return (
-    <section className="py-20 md:py-28">
-      <div className="container">
+    <section className="section-padding relative overflow-hidden">
+      {/* Background Decoration */}
+      <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-primary/3 rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2" />
+      
+      <div className="container relative">
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <div className="badge-professional mb-6">
             Testimoni
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-headline text-foreground mb-5">
             Dipercaya oleh Pelaku Industri
           </h2>
-          <p className="text-muted-foreground">
+          <p className="text-body text-muted-foreground">
             Apa kata klien kami tentang layanan dan produk HASA.
           </p>
         </div>
@@ -46,34 +49,40 @@ export const TestimonialsSection = () => {
           {testimonials.map((testimonial, index) => (
             <article
               key={index}
-              className="relative bg-card rounded-xl p-6 border border-border/50 hover:shadow-lg hover:border-primary/20 transition-all duration-300"
+              className="relative card-professional p-8 animate-fade-in-up"
+              style={{ animationDelay: `${index * 150}ms` }}
             >
               {/* Quote Icon */}
-              <Quote className="absolute top-6 right-6 w-8 h-8 text-primary/10" />
+              <div className="absolute top-6 right-6 w-12 h-12 rounded-full bg-primary/5 flex items-center justify-center">
+                <Quote className="w-5 h-5 text-primary/40" />
+              </div>
 
               {/* Rating */}
-              <div className="flex gap-1 mb-4">
+              <div className="flex gap-1 mb-6">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+                  <Star key={i} className="w-5 h-5 fill-primary text-primary" />
                 ))}
               </div>
 
               {/* Content */}
-              <p className="text-muted-foreground mb-6 leading-relaxed">
+              <p className="text-body text-muted-foreground mb-8 leading-relaxed">
                 "{testimonial.content}"
               </p>
 
               {/* Author */}
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                  <span className="text-primary font-semibold">
+              <div className="flex items-center gap-4 pt-6 border-t border-border/50">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-cta flex items-center justify-center shadow-md">
+                  <span className="text-primary-foreground font-bold text-lg">
                     {testimonial.name.charAt(0)}
                   </span>
                 </div>
                 <div>
-                  <div className="font-semibold text-foreground">{testimonial.name}</div>
-                  <div className="text-sm text-muted-foreground">
-                    {testimonial.role}, {testimonial.company}
+                  <div className="font-bold text-foreground">{testimonial.name}</div>
+                  <div className="text-caption text-muted-foreground">
+                    {testimonial.role}
+                  </div>
+                  <div className="text-caption text-primary font-medium">
+                    {testimonial.company}
                   </div>
                 </div>
               </div>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, MessageCircle } from "lucide-react";
 
@@ -16,19 +16,32 @@ const WHATSAPP_MESSAGE = encodeURIComponent("Halo HASA, saya tertarik dengan pro
 
 export const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`;
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border/50">
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      isScrolled 
+        ? "bg-background/95 backdrop-blur-xl border-b border-border/50 shadow-sm" 
+        : "bg-transparent"
+    }`}>
       <div className="container">
-        <div className="flex items-center justify-between h-16 md:h-20">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#beranda" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center transition-transform group-hover:scale-105">
-              <span className="text-primary-foreground font-bold text-lg">H</span>
+          <a href="#beranda" className="flex items-center gap-3 group">
+            <div className="w-11 h-11 rounded-xl bg-gradient-cta flex items-center justify-center transition-transform group-hover:scale-105 shadow-md">
+              <span className="text-primary-foreground font-extrabold text-xl">H</span>
             </div>
-            <span className="font-bold text-xl text-foreground">HASA</span>
+            <span className="font-extrabold text-2xl text-foreground">HASA</span>
           </a>
 
           {/* Desktop Navigation */}
@@ -45,12 +58,14 @@ export const Header = () => {
           </nav>
 
           {/* CTA Buttons */}
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden md:flex items-center gap-4">
             <a href="tel:087892882525" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
-              <Phone className="w-4 h-4" />
-              <span className="hidden xl:inline">087892882525</span>
+              <div className="w-9 h-9 rounded-full bg-secondary flex items-center justify-center">
+                <Phone className="w-4 h-4" />
+              </div>
+              <span className="hidden xl:inline font-medium">087892882525</span>
             </a>
-            <Button variant="whatsapp" size="sm" asChild>
+            <Button variant="whatsapp" size="default" asChild className="shadow-md">
               <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="w-4 h-4" />
                 Hubungi via WhatsApp
@@ -60,36 +75,38 @@ export const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 rounded-lg hover:bg-secondary transition-colors"
+            className="lg:hidden w-11 h-11 rounded-xl bg-secondary flex items-center justify-center transition-colors hover:bg-secondary/80"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-border animate-fade-in">
+          <div className="lg:hidden py-6 border-t border-border animate-fade-in bg-background/95 backdrop-blur-xl">
             <nav className="flex flex-col gap-1">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className="px-4 py-3 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary rounded-lg transition-colors"
+                  className="px-4 py-3 text-base font-medium text-muted-foreground hover:text-foreground hover:bg-secondary rounded-xl transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.label}
                 </a>
               ))}
             </nav>
-            <div className="mt-4 pt-4 border-t border-border flex flex-col gap-3">
-              <a href="tel:087892882525" className="flex items-center gap-2 px-4 py-2 text-sm text-muted-foreground">
-                <Phone className="w-4 h-4" />
+            <div className="mt-6 pt-6 border-t border-border flex flex-col gap-3">
+              <a href="tel:087892882525" className="flex items-center gap-3 px-4 py-3 text-base text-muted-foreground">
+                <div className="w-10 h-10 rounded-xl bg-secondary flex items-center justify-center">
+                  <Phone className="w-4 h-4" />
+                </div>
                 087892882525
               </a>
               <div className="px-4">
-                <Button variant="whatsapp" className="w-full" asChild>
+                <Button variant="whatsapp" className="w-full" size="lg" asChild>
                   <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
                     <MessageCircle className="w-4 h-4" />
                     Hubungi via WhatsApp
