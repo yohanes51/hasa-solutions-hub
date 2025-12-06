@@ -21,7 +21,7 @@ const footerLinks = {
   ],
 };
 
-const WHATSAPP_NUMBER = "6287812345678";
+const WHATSAPP_NUMBER = "6287892882525";
 
 export const Footer = () => {
   return (
@@ -40,9 +40,9 @@ export const Footer = () => {
               Distributor kain polyester dan supplier batu bara terpercaya untuk industri tekstil di Indonesia. Melayani kebutuhan B2B sejak 2025.
             </p>
             <div className="space-y-3">
-              <a href="tel:087812345678" className="flex items-center gap-3 text-sm text-background/70 hover:text-primary transition-colors">
+              <a href="tel:087892882525" className="flex items-center gap-3 text-sm text-background/70 hover:text-primary transition-colors">
                 <Phone className="w-4 h-4" />
-                087812345678
+                087892882525
               </a>
               <a href="mailto:info@hasa.id" className="flex items-center gap-3 text-sm text-background/70 hover:text-primary transition-colors">
                 <Mail className="w-4 h-4" />

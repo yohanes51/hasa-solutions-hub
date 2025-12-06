@@ -10,14 +10,14 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Telepon",
-    value: "087812345678",
-    href: "tel:087812345678",
+    value: "087892882525",
+    href: "tel:087892882525",
   },
   {
     icon: MessageCircle,
     label: "WhatsApp",
-    value: "087812345678",
-    href: "https://wa.me/6287812345678",
+    value: "087892882525",
+    href: "https://wa.me/6287892882525",
   },
   {
     icon: Mail,

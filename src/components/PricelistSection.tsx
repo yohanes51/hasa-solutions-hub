@@ -20,7 +20,7 @@ const pricelistItems = [
   },
 ];
 
-const WHATSAPP_NUMBER = "6287812345678";
+const WHATSAPP_NUMBER = "6287892882525";
 
 export const PricelistSection = () => {
   const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Halo HASA, saya ingin konfirmasi harga terbaru.")}`;
