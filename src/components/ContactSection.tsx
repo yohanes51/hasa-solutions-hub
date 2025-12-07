@@ -9,15 +9,10 @@ import { Phone, Mail, MapPin, Clock, MessageCircle, Send, Loader2 } from "lucide
 const contactInfo = [
   {
     icon: Phone,
-    label: "Telepon",
-    value: "087892882525",
-    href: "tel:087892882525",
-  },
-  {
-    icon: MessageCircle,
-    label: "WhatsApp",
+    label: "Telepon / WhatsApp",
     value: "087892882525",
     href: "https://wa.me/6287892882525",
+    secondaryHref: "tel:087892882525",
   },
   {
     icon: Mail,
