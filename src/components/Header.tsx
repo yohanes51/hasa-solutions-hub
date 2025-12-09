@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, MessageCircle } from "lucide-react";
+import logoHasa from "@/assets/logo-hasa.png";
 
 const navLinks = [
   { href: "#beranda", label: "Beranda" },
@@ -37,11 +38,12 @@ export const Header = () => {
       <div className="container">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#beranda" className="flex items-center gap-3 group">
-            <div className="w-11 h-11 rounded-xl bg-gradient-cta flex items-center justify-center transition-transform group-hover:scale-105 shadow-md">
-              <span className="text-primary-foreground font-extrabold text-xl">H</span>
-            </div>
-            <span className="font-extrabold text-2xl text-foreground">HASA</span>
+          <a href="#beranda" className="flex items-center group">
+            <img 
+              src={logoHasa} 
+              alt="HASA Logo" 
+              className="h-12 w-auto transition-transform group-hover:scale-105"
+            />
           </a>
 
           {/* Desktop Navigation */}
