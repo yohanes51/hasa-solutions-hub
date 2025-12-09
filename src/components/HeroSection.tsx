@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, MessageCircle, Sparkles } from "lucide-react";
+import { ArrowRight, MessageCircle } from "lucide-react";
 import warehouseBackground from "@/assets/warehouse-background.png";
 
 const WHATSAPP_NUMBER = "6287892882525";
@@ -20,11 +20,6 @@ export const HeroSection = () => {
 
       <div className="container relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-background/20 backdrop-blur-sm border border-background/30 text-background text-sm font-medium mb-8 animate-fade-in">
-            <Sparkles className="w-4 h-4 text-primary" />
-            <span>Supplier Terpercaya Sejak 2025</span>
-          </div>
 
           {/* Headline */}
           <h1 className="text-display text-background mb-6 animate-slide-up">
