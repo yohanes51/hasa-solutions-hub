@@ -26,7 +26,7 @@ const products: Product[] = [
     name: "LM80 Roll 60 Yard",
     category: "polyester",
     description: "Kain polyester LM80 berkualitas tinggi untuk konveksi massal dengan daya tahan optimal.",
-    specs: ["Roll 60 Yard", "Berat 13,15 kg", "Lebar 150 cm"],
+    specs: ["Roll ±60 Yard*", "Berat 13,15 kg", "Lebar 150 cm", "*Panjang tidak selalu 60 yard"],
     price: "Rp 16.450",
     moq: "5 roll",
     readyTime: "1-2 hari kerja",
