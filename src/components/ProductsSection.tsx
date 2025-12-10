@@ -1,11 +1,11 @@
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Layers, Flame, MessageCircle, ArrowUpRight } from "lucide-react";
-import { ContactModal } from "./ContactModal";
-import productLM80 from "@/assets/product-lm80.png";
-import productLM76 from "@/assets/product-lm76.jpg";
 import productCoalTR5800 from "@/assets/product-coal-tr5800.jpg";
+import productLM76 from "@/assets/product-lm76.jpg";
+import productLM80 from "@/assets/product-lm80.png";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { ArrowUpRight, Flame, Layers, MessageCircle } from "lucide-react";
+import { useState } from "react";
+import { ContactModal } from "./ContactModal";
 
 type ProductCategory = "all" | "polyester" | "batubara";
 
@@ -28,7 +28,7 @@ const products: Product[] = [
     name: "LM80 Premium White",
     category: "polyester",
     description: "Kain polyester LM80 berkualitas tinggi untuk konveksi massal dengan daya tahan optimal.",
-    specs: ["Roll ±60 Yard*", "Berat 13,15 kg", "Lebar 150 cm", "*Panjang tidak selalu 60 yard"],
+    specs: ["Roll ±60 Yard(±90cm)*", "Berat 13,15 kg", "Lebar 150 cm", "*Panjang tidak selalu 60 yard"],
     price: "Rp 16.500",
     moq: "2.400 yard",
     readyTime: "1-14 hari kerja",
@@ -40,7 +40,7 @@ const products: Product[] = [
     name: "LM76 Premium White",
     category: "polyester",
     description: "Kain polyester LM76 dengan tekstur halus, cocok untuk produk fashion.",
-    specs: ["Roll ±60 Yard*", "Berat 9,60 kg", "Lebar 150 cm", "*Panjang tidak selalu 60 yard"],
+    specs: ["Roll ±60 Yard(±90cm)*", "Berat 9,60 kg", "Lebar 150 cm", "*Panjang tidak selalu 60 yard"],
     price: "Rp 14.500",
     moq: "2.400 yard",
     readyTime: "1-14 hari kerja",
@@ -208,9 +208,9 @@ export const ProductsSection = () => {
                 <div className="flex items-end justify-between mb-5 pt-5 border-t border-border/50">
                   <div>
                     <div className="text-2xl font-extrabold text-foreground">{product.price}</div>
-                    {product.category === "polyester" && (
-                      <div className="text-xs text-muted-foreground">/ yard</div>
-                    )}
+                    <div className="text-xs text-muted-foreground">
+                      / {product.category === "polyester" ? "yard" : "kg"}
+                    </div>
                   </div>
                   <div className="text-right">
                     <div className="text-xs text-muted-foreground">MOQ: <span className="font-semibold text-foreground">{product.moq}</span></div>
