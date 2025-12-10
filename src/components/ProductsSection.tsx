@@ -5,6 +5,7 @@ import { Layers, Flame, MessageCircle, ArrowUpRight } from "lucide-react";
 import { ContactModal } from "./ContactModal";
 import productLM80 from "@/assets/product-lm80.png";
 import productLM76 from "@/assets/product-lm76.jpg";
+import productCoalTR5800 from "@/assets/product-coal-tr5800.jpg";
 
 type ProductCategory = "all" | "polyester" | "batubara";
 
@@ -66,7 +67,7 @@ const products: Product[] = [
     price: "Rp 1.130 + PPN /kg",
     moq: "±30 ton",
     readyTime: "7-14 hari kerja",
-    image: "https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?w=400&h=300&fit=crop",
+    image: productCoalTR5800,
     badge: "Premium",
   },
   {
