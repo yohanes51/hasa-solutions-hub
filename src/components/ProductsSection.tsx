@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Layers, Flame, MessageCircle, ArrowUpRight } from "lucide-react";
 import { ContactModal } from "./ContactModal";
+import productLM80 from "@/assets/product-lm80.png";
 
 type ProductCategory = "all" | "polyester" | "batubara";
 
@@ -21,15 +22,15 @@ interface Product {
 
 const products: Product[] = [
   {
-    id: "poly-a",
-    name: "Polyester Roll A",
+    id: "poly-lm80",
+    name: "LM80 Roll 60 Yard",
     category: "polyester",
-    description: "Kain polyester berkualitas tinggi untuk konveksi massal dengan daya tahan optimal.",
-    specs: ["Roll 30 meter", "Ketebalan 150 gsm", "Lebar 150 cm"],
-    price: "Rp 450.000",
+    description: "Kain polyester LM80 berkualitas tinggi untuk konveksi massal dengan daya tahan optimal.",
+    specs: ["Roll 60 Yard", "Berat 13,15 kg", "Lebar 150 cm"],
+    price: "Rp 16.450",
     moq: "5 roll",
     readyTime: "1-2 hari kerja",
-    image: "https://images.unsplash.com/photo-1558171813-4c088753af8f?w=400&h=300&fit=crop",
+    image: productLM80,
     badge: "Best Seller",
   },
   {
