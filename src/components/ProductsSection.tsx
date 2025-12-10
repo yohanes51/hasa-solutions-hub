@@ -31,7 +31,7 @@ const products: Product[] = [
     specs: ["Roll ±60 Yard*", "Berat 13,15 kg", "Lebar 150 cm", "*Panjang tidak selalu 60 yard"],
     price: "Rp 16.500",
     moq: "2.400 yard",
-    readyTime: "1-2 hari kerja",
+    readyTime: "1-14 hari kerja",
     image: productLM80,
     badge: "Best Seller",
   },
@@ -43,7 +43,7 @@ const products: Product[] = [
     specs: ["Roll ±60 Yard*", "Berat 9,60 kg", "Lebar 150 cm", "*Panjang tidak selalu 60 yard"],
     price: "Rp 14.500",
     moq: "2.400 yard",
-    readyTime: "1-2 hari kerja",
+    readyTime: "1-14 hari kerja",
     image: productLM76,
   },
   {
@@ -54,7 +54,7 @@ const products: Product[] = [
     specs: ["Roll 40 meter", "Ketebalan 120 gsm", "Lebar 140 cm"],
     price: "Rp 380.000",
     moq: "10 roll",
-    readyTime: "3-5 hari kerja",
+    readyTime: "1-14 hari kerja",
     image: "https://images.unsplash.com/photo-1586075010923-2dd4570fb338?w=400&h=300&fit=crop",
     badge: "Hemat",
   },
@@ -208,9 +208,9 @@ export const ProductsSection = () => {
                 <div className="flex items-end justify-between mb-5 pt-5 border-t border-border/50">
                   <div>
                     <div className="text-2xl font-extrabold text-foreground">{product.price}</div>
-                    <div className="text-xs text-muted-foreground">
-                      / {product.category === "polyester" ? "roll" : "ton"}
-                    </div>
+                    {product.category === "polyester" && (
+                      <div className="text-xs text-muted-foreground">/ yard</div>
+                    )}
                   </div>
                   <div className="text-right">
                     <div className="text-xs text-muted-foreground">MOQ: <span className="font-semibold text-foreground">{product.moq}</span></div>
