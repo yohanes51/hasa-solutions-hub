@@ -1,4 +1,5 @@
 import productCoalTR5800 from "@/assets/product-coal-tr5800.jpg";
+import productCoalAsalan5800 from "@/assets/product-coal-asalan5800.png";
 import productLM76 from "@/assets/product-lm76.jpg";
 import productLM80 from "@/assets/product-lm80.png";
 import { Badge } from "@/components/ui/badge";
@@ -79,7 +80,7 @@ const products: Product[] = [
     price: "Rp 1.120+PPN",
     moq: "2 ton",
     readyTime: "2-3 hari kerja",
-    image: "https://images.unsplash.com/photo-1581093588401-fbb62a02f120?w=400&h=300&fit=crop",
+    image: productCoalAsalan5800,
   },
   {
     id: "coal-c",
