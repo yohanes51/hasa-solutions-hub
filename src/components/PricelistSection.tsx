@@ -16,7 +16,7 @@ const pricelistItems = [
     icon: "⚡",
     items: [
       { name: "Lumpy", spec: "High calorie 0-50", price: "Rp 1.310 + PPN/kg", moq: "±30 ton" },
-      { name: "Asalan 5800", spec: "Kalori 5.800+ kcal/kg", price: "Rp 1.120 + PPN/kg", moq: "2 ton" },
+      { name: "Asalan 5800", spec: "Kalori 5.800+ kcal/kg", price: "Rp 1.120 + PPN/kg", moq: "30 ton" },
     ],
   },
 ];

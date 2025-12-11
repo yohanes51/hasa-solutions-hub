@@ -78,20 +78,9 @@ const products: Product[] = [
     description: "Batu asalan, ukuran bisa besar-besar bisa bubuk, kualitas terjaga.",
     specs: ["Kalori 5.800+ kcal/kg", "Sumatra"],
     price: "Rp 1.120+PPN",
-    moq: "2 ton",
-    readyTime: "2-3 hari kerja",
+    moq: "30 ton",
+    readyTime: "7-14 hari kerja",
     image: productCoalAsalan5800,
-  },
-  {
-    id: "coal-c",
-    name: "Batu Bara Grade C - Industrial",
-    category: "batubara",
-    description: "Cocok untuk kebutuhan industri dengan volume besar.",
-    specs: ["Kalori 4.800+ kcal/kg", "Moisture < 15%", "Tersedia dalam jumlah besar"],
-    price: "Rp 1.400.000",
-    moq: "5 ton",
-    readyTime: "3-5 hari kerja",
-    image: "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=400&h=300&fit=crop",
   },
 ];
 
