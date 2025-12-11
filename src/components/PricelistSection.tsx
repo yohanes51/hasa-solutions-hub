@@ -6,18 +6,17 @@ const pricelistItems = [
     category: "Kain Polyester",
     icon: "🧵",
     items: [
-      { name: "Polyester Roll A", spec: "30m × 150cm × 150gsm", price: "Rp 450.000/roll", moq: "5 roll" },
-      { name: "Polyester Roll B Premium", spec: "25m × 150cm × 180gsm", price: "Rp 575.000/roll", moq: "3 roll" },
-      { name: "Polyester Roll C Economy", spec: "40m × 140cm × 120gsm", price: "Rp 380.000/roll", moq: "10 roll" },
+      { name: "LM80 Premium White", spec: "±60 yard × 150cm", price: "Rp 16.500/yard", moq: "2.400 yard" },
+      { name: "LM76 Premium White", spec: "±60 yard × 150cm", price: "Rp 14.500/yard", moq: "2.400 yard" },
+      { name: "Bsy 4200 White", spec: "±60 yard × 120cm", price: "Rp 10.600/yard", moq: "±2000 roll" },
     ],
   },
   {
     category: "Batu Bara",
     icon: "⚡",
     items: [
-      { name: "Grade A (Premium)", spec: "6.200+ kcal/kg", price: "Rp 2.100.000/ton", moq: "1 ton" },
-      { name: "Grade B (Standard)", spec: "5.500+ kcal/kg", price: "Rp 1.750.000/ton", moq: "2 ton" },
-      { name: "Grade C (Industrial)", spec: "4.800+ kcal/kg", price: "Rp 1.400.000/ton", moq: "5 ton" },
+      { name: "Lumpy", spec: "High calorie 0-50", price: "Rp 1.310 + PPN/kg", moq: "±30 ton" },
+      { name: "Asalan 5800", spec: "Kalori 5.800+ kcal/kg", price: "Rp 1.120 + PPN/kg", moq: "2 ton" },
     ],
   },
 ];
