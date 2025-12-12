@@ -21,20 +21,29 @@ export const HeroSection = () => {
       <div className="container relative z-10">
         <div className="max-w-4xl mx-auto text-center">
 
+          {/* Digital Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium bg-primary/20 text-primary border border-primary/30 mb-6 animate-slide-up backdrop-blur-sm">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+            </span>
+            Order Digital • Respon Cepat
+          </div>
+
           {/* Headline */}
-          <h1 className="text-display text-background mb-6 animate-slide-up">
-            Solusi <span className="text-primary">Bahan & Energi</span>
-            <br />untuk Industri Tekstil
+          <h1 className="text-display text-background mb-6 animate-slide-up delay-100">
+            Distribusi <span className="text-primary">Digital</span>
+            <br />Bahan Baku Industri
           </h1>
 
           {/* Subheadline */}
-          <p className="text-body-lg text-background/80 max-w-2xl mx-auto mb-12 animate-slide-up delay-100">
-            Kain polyester roll berkualitas dan batu bara untuk finishing pabrik.
-            <span className="block mt-2 text-background font-medium">Pengambilan langsung di Bandung.</span>
+          <p className="text-body-lg text-background/80 max-w-2xl mx-auto mb-12 animate-slide-up delay-200">
+            Pesan kain polyester dan batu bara dengan mudah via WhatsApp.
+            <span className="block mt-2 text-background font-medium">Proses transparan, pengambilan langsung di Bandung.</span>
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-slide-up delay-200">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-slide-up delay-300">
             <Button variant="hero" size="xl" asChild className="group">
               <a href="#produk">
                 Lihat Katalog
@@ -50,24 +59,24 @@ export const HeroSection = () => {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-4 md:gap-8 mt-20 pt-12 border-t border-background/20 animate-slide-up delay-300">
+          <div className="grid grid-cols-3 gap-4 md:gap-8 mt-20 pt-12 border-t border-background/20 animate-slide-up delay-400">
             <div className="text-center group">
               <div className="text-3xl md:text-5xl font-extrabold text-background group-hover:text-primary transition-colors">
-                50<span className="text-primary">+</span>
+                &lt;24<span className="text-primary">jam</span>
               </div>
-              <div className="text-caption text-background/70 mt-2">Klien Pabrik</div>
+              <div className="text-caption text-background/70 mt-2">Respon Order</div>
             </div>
             <div className="text-center group">
               <div className="text-3xl md:text-5xl font-extrabold text-background group-hover:text-primary transition-colors">
-                1000<span className="text-primary">+</span>
+                100<span className="text-primary">%</span>
               </div>
-              <div className="text-caption text-background/70 mt-2">Roll Terjual</div>
+              <div className="text-caption text-background/70 mt-2">Digital Order</div>
             </div>
             <div className="text-center group">
               <div className="text-3xl md:text-5xl font-extrabold text-background group-hover:text-primary transition-colors">
                 24<span className="text-primary">/7</span>
               </div>
-              <div className="text-caption text-background/70 mt-2">Layanan</div>
+              <div className="text-caption text-background/70 mt-2">Layanan WA</div>
             </div>
           </div>
         </div>
