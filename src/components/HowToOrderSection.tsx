@@ -5,23 +5,23 @@ const steps = [
   {
     number: "01",
     icon: Search,
-    title: "Pilih Produk",
-    description: "Jelajahi katalog kami dan pilih produk yang sesuai dengan kebutuhan bisnis Anda.",
-    highlights: ["Berbagai pilihan", "Spesifikasi jelas"],
+    title: "Lihat Katalog Digital",
+    description: "Jelajahi katalog online kami dengan spesifikasi lengkap dan harga transparan.",
+    highlights: ["Info lengkap", "Harga update"],
   },
   {
     number: "02",
     icon: MessageCircle,
-    title: "Hubungi Kami",
-    description: "Kirim permintaan via WhatsApp, telepon, atau isi form kontak untuk negosiasi harga.",
-    highlights: ["Respon cepat", "Harga kompetitif"],
+    title: "Order via WhatsApp",
+    description: "Kirim pesan WhatsApp dengan detail kebutuhan. Tim kami respon dalam hitungan jam.",
+    highlights: ["Respon < 24 jam", "Chat 24/7"],
   },
   {
     number: "03",
     icon: Truck,
-    title: "Ambil atau Kirim",
-    description: "Jadwalkan pengambilan langsung di lokasi kami atau atur pengiriman ke tempat Anda.",
-    highlights: ["Fleksibel", "Tepat waktu"],
+    title: "Konfirmasi & Pickup",
+    description: "Terima konfirmasi digital, lalu ambil barang di lokasi atau atur pengiriman.",
+    highlights: ["Tracking order", "Pickup mudah"],
   },
 ];
 
@@ -48,13 +48,17 @@ export const HowToOrderSection = () => {
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium mb-6 bg-primary/20 text-primary border border-primary/20">
-            Cara Order
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+            </span>
+            Sistem Order Digital
           </div>
           <h2 className="text-headline mb-5">
-            Pemesanan Mudah dalam 3 Langkah
+            Order Online, Proses Instan
           </h2>
           <p className="text-body text-background/70">
-            Proses order yang simpel dan cepat. Kami siap membantu kebutuhan bahan baku industri Anda.
+            Tidak perlu datang ke kantor atau telepon berulang kali. Semua bisa dilakukan via chat.
           </p>
         </div>
 

@@ -1,27 +1,32 @@
-import { Factory, Truck, Shield, Target, Handshake, Zap, CheckCircle2 } from "lucide-react";
+import { Factory, Truck, Shield, Target, Handshake, Zap, CheckCircle2, Smartphone, Clock, BarChart3 } from "lucide-react";
 
 const benefits = [
   {
+    icon: Smartphone,
+    title: "Order Digital via WhatsApp",
+    description: "Proses pemesanan modern melalui WhatsApp. Cukup kirim pesan, terima penawaran, dan konfirmasi order.",
+  },
+  {
+    icon: Clock,
+    title: "Respon Cepat < 24 Jam",
+    description: "Tim kami siap merespon setiap inquiry dalam waktu kurang dari 24 jam kerja.",
+  },
+  {
+    icon: BarChart3,
+    title: "Tracking Transparan",
+    description: "Pantau status pesanan dan ketersediaan stok secara real-time melalui komunikasi langsung.",
+  },
+  {
     icon: Factory,
-    title: "Pasokan Langsung dari Pabrik",
-    description: "Hubungan langsung dengan produsen menjamin ketersediaan stok, harga kompetitif, dan kualitas yang konsisten.",
-  },
-  {
-    icon: Shield,
-    title: "Kualitas Terjamin",
-    description: "Setiap produk melalui quality control ketat untuk memastikan standar industri terpenuhi.",
-  },
-  {
-    icon: Truck,
-    title: "Distribusi Terstandarisasi",
-    description: "Proses distribusi yang transparan dan efisien untuk mendukung operasional mitra kami.",
+    title: "Pasokan Langsung Pabrik",
+    description: "Hubungan langsung dengan produsen menjamin ketersediaan stok dan harga kompetitif.",
   },
 ];
 
 const values = [
-  { icon: Target, label: "Kualitas Konsisten" },
-  { icon: Handshake, label: "Layanan Responsif" },
-  { icon: Zap, label: "Operasional Efisien" },
+  { icon: Target, label: "Sistem Digital" },
+  { icon: Handshake, label: "Proses Transparan" },
+  { icon: Zap, label: "Respon Cepat" },
 ];
 
 export const AboutSection = () => {
@@ -38,18 +43,18 @@ export const AboutSection = () => {
               Tentang HASA
             </div>
             <h2 className="text-headline text-foreground mb-8">
-              Distributor Bahan Baku Industri Tekstil Terpercaya
+              Distribusi Modern dengan <span className="text-primary">Sistem Digital</span>
             </h2>
             
             <div className="space-y-5 mb-10">
               <p className="text-body-lg text-muted-foreground">
-                <strong className="text-foreground font-semibold">HASA</strong> adalah perusahaan distribusi bahan baku industri yang berfokus pada penyediaan <strong className="text-foreground font-semibold">kain polyester</strong> dan <strong className="text-foreground font-semibold">batu bara</strong> untuk kebutuhan pabrik tekstil.
+                <strong className="text-foreground font-semibold">HASA</strong> menghadirkan cara baru dalam distribusi bahan baku industri. Dengan <strong className="text-foreground font-semibold">sistem order digital</strong>, Anda dapat memesan kain polyester dan batu bara dengan mudah via WhatsApp.
               </p>
               <p className="text-body text-muted-foreground">
-                Berlokasi di <strong className="text-foreground font-semibold">Bandung</strong>, HASA berkomitmen untuk memberikan pasokan material berkualitas, layanan yang responsif, serta operasional yang efisien bagi mitra industri skala kecil hingga menengah.
+                Berlokasi di <strong className="text-foreground font-semibold">Bandung</strong>, kami mengkombinasikan <strong className="text-foreground font-semibold">kemudahan teknologi</strong> dengan layanan personal untuk mitra industri skala kecil hingga menengah.
               </p>
               <p className="text-body text-muted-foreground">
-                Didukung oleh hubungan langsung dengan pabrik, HASA memastikan kualitas produk yang konsisten serta proses distribusi yang transparan dan terstandarisasi.
+                Proses pemesanan transparan, tracking real-time via chat, dan konfirmasi instan. <strong className="text-foreground font-semibold">Tidak perlu telepon berulang kali</strong> — cukup satu chat untuk semua kebutuhan.
               </p>
             </div>
             
