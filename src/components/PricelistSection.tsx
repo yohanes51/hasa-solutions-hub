@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { MessageCircle, Download, Info, CheckCircle2 } from "lucide-react";
 
 const pricelistItems = [
@@ -9,6 +10,19 @@ const pricelistItems = [
       { name: "LM80 Premium White", spec: "±60 yard × 150cm", price: "Rp 16.500/yard", moq: "2.400 yard" },
       { name: "LM76 Premium White", spec: "±60 yard × 150cm", price: "Rp 14.500/yard", moq: "2.400 yard" },
       { name: "Bsy 4200 White", spec: "±60 yard × 120cm", price: "Rp 10.600/yard", moq: "±2000 roll" },
+      { name: "Poly Micro Stretch 150gsm", spec: "150gsm × 150cm", price: "Hubungi Kami", moq: "1.200 yard", badge: "New" },
+      { name: "Poly Micro Stretch 180gsm", spec: "180gsm × 150cm", price: "Hubungi Kami", moq: "1.200 yard", badge: "New" },
+      { name: "Poly Micro Stretch 210gsm", spec: "210gsm × 150cm", price: "Hubungi Kami", moq: "1.200 yard", badge: "New" },
+      { name: "Satin Velvet 150gsm", spec: "150gsm × 150cm", price: "Hubungi Kami", moq: "1.200 yard", badge: "New" },
+      { name: "Satin Velvet 180gsm", spec: "180gsm × 150cm", price: "Hubungi Kami", moq: "1.200 yard", badge: "New" },
+      { name: "Spunlike 150gsm", spec: "150gsm × 150cm", price: "Hubungi Kami", moq: "1.200 yard", badge: "New" },
+      { name: "Spunlike 180gsm", spec: "180gsm × 150cm", price: "Hubungi Kami", moq: "1.200 yard", badge: "New" },
+      { name: "Ripstop 150gsm", spec: "150gsm × 150cm", price: "Hubungi Kami", moq: "1.200 yard", badge: "New" },
+      { name: "Ripstop 180gsm", spec: "180gsm × 150cm", price: "Hubungi Kami", moq: "1.200 yard", badge: "New" },
+      { name: "Asahi / Sponge 150gsm", spec: "150gsm × 150cm", price: "Hubungi Kami", moq: "1.200 yard", badge: "New" },
+      { name: "Asahi / Sponge 180gsm", spec: "180gsm × 150cm", price: "Hubungi Kami", moq: "1.200 yard", badge: "New" },
+      { name: "Taffeta 150gsm", spec: "150gsm × 150cm", price: "Hubungi Kami", moq: "1.200 yard", badge: "New" },
+      { name: "Taffeta 180gsm", spec: "180gsm × 150cm", price: "Hubungi Kami", moq: "1.200 yard", badge: "New" },
     ],
   },
   {
@@ -73,7 +87,14 @@ export const PricelistSection = () => {
                     {category.items.map((item, i) => (
                       <tr key={i} className="border-b border-border/30 last:border-b-0 hover:bg-muted/30 transition-colors group">
                         <td className="px-8 py-5">
-                          <div className="font-semibold text-foreground group-hover:text-primary transition-colors">{item.name}</div>
+                          <div className="flex items-center gap-2">
+                            <span className="font-semibold text-foreground group-hover:text-primary transition-colors">{item.name}</span>
+                            {(item as any).badge && (
+                              <Badge variant="secondary" className="text-xs bg-primary/10 text-primary border-0">
+                                {(item as any).badge}
+                              </Badge>
+                            )}
+                          </div>
                           <div className="text-xs text-muted-foreground sm:hidden mt-1">{item.spec}</div>
                         </td>
                         <td className="px-8 py-5 text-sm text-muted-foreground hidden sm:table-cell">{item.spec}</td>
